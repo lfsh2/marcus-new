@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Legal — Marcus Jenkins · Sage & Gold</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f5f7f4;--bg-warm:#eef2eb;--bg-section:#e5ebe0;--white:#ffffff;--deep:#2b3a2e;--mid:#5a7a5c;--soft:#8aaa7c;--pale:#c8d9be;--wash:rgba(90,122,92,.08);--gold:#c4922a;--gold-pale:#f0e0c0;--text:#2a2e28;--text-mid:#6a7a64;--text-light:#9aaa94;--border:#d8ddd4;--border-lt:#e8ede4;--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{max-width:1440px;width:100%;margin:0 auto;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased;}
+.lbl{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);}.lbl::before{content:'';width:16px;height:1.5px;background:var(--gold);display:block;}
+.lbl-m{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid);}.lbl-m::before{content:'';width:16px;height:1.5px;background:var(--soft);display:block;}
+.lbl-lt{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.5);}.lbl-lt::before{content:'';width:16px;height:1.5px;background:rgba(255,255,255,.3);display:block;}
+.h2{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.1;color:var(--deep);}.h2 em{font-style:italic;color:var(--mid);}
+.h2-lt{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.1;color:#fff;}.h2-lt em{font-style:italic;color:var(--pale);}
+.body{font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.8;color:var(--text-mid);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:500;padding:14px 28px;border-radius:2px;text-decoration:none;cursor:pointer;border:none;letter-spacing:.3px;}
+.btn-dark{background:var(--deep);color:#fff;}.btn-mid{background:var(--mid);color:#fff;}.btn-out{background:transparent;color:var(--deep);border:1.5px solid var(--border);}.btn-wh{background:#fff;color:var(--deep);}.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+nav{width:100%;height:68px;background:var(--white);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;}
+.nav-in{width:100%;padding:0 64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-mark{width:32px;height:32px;background:var(--deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:14px;color:var(--gold);}
+.nav-name{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--deep);}.nav-name em{font-style:italic;color:var(--mid);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;color:var(--text-mid);text-decoration:none;}.nav-links a.active{color:var(--deep);font-weight:500;}
+.nav-cta{background:var(--deep)!important;color:#fff!important;padding:10px 20px;border-radius:2px;font-weight:500!important;font-size:12px!important;}
+.hero{width:100%;background:var(--white);padding:80px 64px 60px;display:grid;grid-template-columns:1fr 520px;gap:60px;align-items:start;}
+.hero-content{max-width:600px;}
+.hero-h1{font-family:var(--serif);font-size:64px;font-weight:300;line-height:.95;color:var(--deep);margin-bottom:8px;}.hero-h1 em{font-style:italic;color:var(--mid);}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--text-light);margin-bottom:24px;}
+.hero-desc{font-size:14px;color:var(--text-mid);line-height:1.75;margin-bottom:28px;max-width:480px;}
+.toc-box{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:32px 28px;}
+.toc-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--deep);margin-bottom:16px;}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.toc-list li a{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-mid);text-decoration:none;}
+.toc-list li a::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--soft);}
+.toc-list li a:hover{color:var(--deep);}
+.legal-section{width:100%;background:var(--bg-warm);padding:80px 64px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.legal-grid{display:grid;grid-template-columns:280px 1fr;gap:64px;}
+.legal-sidebar{position:sticky;top:100px;}
+.legal-nav{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.legal-nav li a{display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:13px;color:var(--text-mid);text-decoration:none;border-radius:3px;background:var(--white);border:1px solid var(--border);}
+.legal-nav li a.active{background:var(--deep);color:#fff;border-color:var(--deep);}
+.legal-nav li a::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--soft);}
+.legal-nav li a.active::before{background:var(--gold);}
+.legal-content{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:48px 44px;}
+.legal-block{margin-bottom:40px;}
+.legal-block:last-child{margin-bottom:0;}
+.legal-h{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--deep);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border-lt);}
+.legal-p{font-size:14px;line-height:1.85;color:var(--text-mid);margin-bottom:14px;}
+.legal-p:last-child{margin-bottom:0;}
+.legal-p strong{font-weight:600;color:var(--deep);}
+.legal-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:14px 0;}
+.legal-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-mid);line-height:1.7;}
+.legal-list li::before{content:'•';color:var(--mid);font-weight:700;flex-shrink:0;}
+footer{width:100%;background:var(--deep);border-top:1px solid rgba(255,255,255,.04);}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding:56px 64px 44px;}
+.footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-mark{width:32px;height:32px;background:var(--mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:13px;color:var(--gold);}
+.footer-name{font-family:var(--serif);font-size:18px;font-weight:300;color:#fff;}.footer-name em{font-style:italic;color:var(--pale);}
+.footer-tag{font-size:12.5px;color:rgba(255,255,255,.3);line-height:1.7;max-width:220px;margin-bottom:20px;}
+.footer-verse{padding:12px 14px;border-left:2px solid rgba(255,255,255,.1);}.footer-verse p{font-family:var(--serif);font-style:italic;font-size:12px;color:rgba(255,255,255,.28);line-height:1.6;}
+.fcol-hd{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:16px;}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px;}.flinks a{font-size:13px;color:rgba(255,255,255,.42);text-decoration:none;}
+.footer-bot{padding:18px 64px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;}
+.footer-bot p{font-size:11px;color:rgba(255,255,255,.2);}.footer-powered{font-size:11px;color:rgba(255,255,255,.15);}.footer-powered strong{color:rgba(255,255,255,.35);font-weight:500;}
+
+
+
+/* ================================================
+   MOBILE RESPONSIVE — all marcus pages
+   Breakpoints: 900px (tablet) | 540px (phone)
+   ================================================ */
+
+/* ── Tablet: ≤ 900px ─────────────────────────── */
+/* ── Hamburger nav (hidden on desktop) ── */
+nav{position:relative;}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;z-index:110;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--deep);border-radius:1px;transition:transform .25s,opacity .25s;}
+.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-open .nav-burger span:nth-child(2){opacity:0;}
+.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media(max-width:900px){
+
+  /* ── Body & shared layout ── */
+  body{overflow-x:hidden;}
+
+  /* ── Navigation ── */
+  nav{width:100%!important;}
+  .nav-in{padding:0 24px;}
+  .nav-links{display:none;}
+  .nav-burger{display:flex!important;}
+  nav.nav-open{height:auto!important;flex-wrap:wrap;}
+  .nav-open .nav-links{display:flex!important;flex-direction:column;width:100%;position:absolute;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border-lt);padding:4px 0 16px;z-index:100;gap:0!important;box-shadow:0 6px 16px rgba(0,0,0,.08);}
+  .nav-open .nav-links li{width:100%;border-bottom:1px solid var(--border-lt);}
+  .nav-open .nav-links li:last-child{border-bottom:none;}
+  .nav-open .nav-links li a{padding:13px 24px;display:block;font-size:14px!important;}
+  .nav-open .nav-links .nav-cta{margin:8px 24px 4px!important;padding:10px 20px!important;text-align:center;display:block;border-radius:2px;}
+
+  /* ── Hero (all pages with a hero section) ── */
+  .hero{
+    grid-template-columns:1fr!important;
+    padding:48px 24px 36px!important;
+    gap:32px!important;
+    width:100%!important;
+  }
+  .hero-content{max-width:100%;}
+  .hero-h1{font-size:46px!important;}
+  .hero-sub{font-size:22px!important;}
+  .hero-img{
+    aspect-ratio:16/9!important;
+    box-shadow:10px 10px 0 var(--pale),0 20px 40px rgba(0,0,0,.12)!important;
+  }
+  .hero-btns{flex-wrap:wrap;}
+
+  /* ── Stats row ── */
+  .stats-row{
+    width:100%!important;
+    padding:0 24px 40px!important;
+    flex-wrap:wrap;
+    gap:20px!important;
+  }
+
+  /* ── Pillars (4-col → 2-col) ── */
+  .pillars{
+    width:100%!important;
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+
+  /* ── About / scripture left + content right ── */
+  .about{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+
+  /* ── Programs dark section ── */
+  .programs{width:100%!important;padding:60px 24px!important;}
+  .programs-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+    margin-bottom:32px!important;
+  }
+  .programs-header-right{max-width:100%!important;text-align:left!important;}
+  .programs-grid{grid-template-columns:1fr!important;gap:0!important;}
+  .prog-card{padding:32px 24px!important;}
+
+  /* ── Path section (4-col → 2-col) ── */
+  .path{width:100%!important;padding:60px 24px!important;}
+  .path-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+    margin-bottom:32px!important;
+  }
+  .path-header-right{max-width:100%!important;}
+  .path-grid{grid-template-columns:repeat(2,1fr)!important;}
+
+  /* ── Testimonials strip ── */
+  .testimonials{width:100%!important;padding:60px 24px!important;}
+  .test-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+  }
+  .test-header-right{align-items:flex-start!important;}
+  .test-grid{grid-template-columns:1fr!important;gap:0!important;}
+
+  /* ── CTA split ── */
+  .cta{width:100%!important;grid-template-columns:1fr!important;}
+  .cta-left{padding:56px 24px!important;}
+  .cta-right{
+    padding:48px 24px!important;
+    border-left:none!important;
+    border-top:1px solid var(--border)!important;
+  }
+  .cta-h{font-size:36px!important;}
+
+  /* ── Footer ── */
+  footer{width:100%!important;}
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr)!important;
+    padding:40px 24px 32px!important;
+    gap:32px!important;
+  }
+  .footer-bot{
+    padding:16px 24px!important;
+    flex-direction:column!important;
+    gap:8px!important;
+    text-align:center!important;
+  }
+
+  /* ══ PAGE-SPECIFIC ══════════════════════════ */
+
+  /* ── About page: values-grid (3-col → 2-col), creds-grid (4-col → 2-col) ── */
+  .values-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .value-card{padding:28px 20px!important;}
+  .creds-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .cred-item{padding:28px 20px!important;}
+
+  /* ── Work-with-me: compare table ── */
+  .compare{width:100%!important;padding:60px 24px!important;overflow-x:auto;}
+  .compare-table{min-width:560px;}
+
+  /* ── VSL page ── */
+  .vsl-hero{
+    width:100%!important;
+    padding:60px 24px 36px!important;
+  }
+  .vsl-box{
+    width:100%!important;
+    max-width:100%!important;
+    padding:0!important;
+  }
+  .learn{width:100%!important;padding:60px 24px!important;}
+  .learn-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .learn-item{padding:28px 20px!important;}
+  .about-coach{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .coach-img{width:100%!important;aspect-ratio:4/3!important;max-height:380px!important;}
+
+  /* ── Book page ── */
+  .book-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .book-embed{min-height:400px!important;}
+  .expect{width:100%!important;padding:60px 24px!important;}
+  .expect-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .expect-item{padding:28px 20px!important;}
+
+  /* ── FAQ page: sidebar stacks above content ── */
+  .faq-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:32px!important;
+  }
+  .faq-sidebar{position:static!important;top:auto!important;}
+
+  /* ── Testimonials page: featured card ── */
+  .featured{width:100%!important;padding:60px 24px!important;}
+  .featured-card{
+    grid-template-columns:1fr!important;
+    gap:32px!important;
+  }
+  .fc-img{max-height:360px!important;}
+
+  /* ── Contact page ── */
+  .contact-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .form-box{padding:32px 24px!important;}
+  .ways{width:100%!important;padding:60px 24px!important;}
+  .ways-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .way-item{padding:28px 20px!important;}
+
+  /* ── Legal page: sticky sidebar stacks above content ── */
+  .legal-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:32px!important;
+  }
+  .legal-sidebar{position:static!important;top:auto!important;}
+  .legal-content{padding:32px 24px!important;}
+
+  /* ── Typography scale-down ── */
+  .h2,.h2-lt{font-size:38px!important;}
+  .h1{font-size:46px!important;}
+}
+
+/* ── Phone: ≤ 540px ──────────────────────────── */
+@media(max-width:540px){
+
+  /* ── Navigation ── */
+  .nav-in{padding:0 16px!important;}
+
+  /* ── Hero ── */
+  .hero{padding:32px 16px 28px!important;}
+  .hero-h1{font-size:34px!important;line-height:1.05!important;}
+  .hero-sub{font-size:18px!important;}
+  .hero-desc{font-size:13px!important;}
+  .hero-btns{flex-direction:column!important;gap:10px!important;}
+  .hero-btns .btn{width:100%!important;justify-content:center!important;}
+  .hero-img{
+    aspect-ratio:4/3!important;
+    box-shadow:8px 8px 0 var(--pale),0 16px 32px rgba(0,0,0,.12)!important;
+  }
+
+  /* ── Stats ── */
+  .stats-row{padding:0 16px 28px!important;}
+
+  /* ── Pillars → 1 col ── */
+  .pillars{grid-template-columns:1fr!important;}
+  .pillar{padding:20px 16px!important;border-right:none!important;border-bottom:1px solid var(--border-lt)!important;}
+
+  /* ── About ── */
+  .about{padding:40px 16px!important;}
+  .chips-grid{grid-template-columns:1fr 1fr!important;}
+
+  /* ── Programs ── */
+  .programs{padding:40px 16px!important;}
+  .prog-card{padding:24px 16px!important;}
+
+  /* ── Path → 1 col ── */
+  .path{padding:40px 16px!important;}
+  .path-grid{grid-template-columns:1fr!important;}
+  .path-step{
+    padding:24px 16px!important;
+    border-right:none!important;
+    border-bottom:1px solid var(--border-lt)!important;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials{padding:40px 16px!important;}
+  .tcard{padding:24px 16px!important;}
+
+  /* ── CTA ── */
+  .cta-left,.cta-right{padding:36px 16px!important;}
+  .cta-h{font-size:26px!important;}
+  .cta-btns{flex-direction:column!important;gap:10px!important;}
+  .cta-btns .btn{width:100%!important;justify-content:center!important;}
+
+  /* ── Footer → 1 col ── */
+  .footer-grid{grid-template-columns:1fr!important;padding:28px 16px 20px!important;}
+  .footer-bot{padding:12px 16px!important;}
+
+  /* ── Typography ── */
+  .h2,.h2-lt{font-size:28px!important;}
+  .h1{font-size:32px!important;}
+  .hero-h1{font-size:28px!important;}
+
+  /* ── About page ── */
+  .values-grid{grid-template-columns:1fr!important;}
+  .value-card{padding:20px 16px!important;}
+  .creds-grid{grid-template-columns:1fr 1fr!important;}
+  .cred-item{padding:20px 16px!important;}
+
+  /* ── VSL page ── */
+  .vsl-hero{padding:40px 16px 28px!important;}
+  .learn{padding:40px 16px!important;}
+  .learn-grid{grid-template-columns:1fr!important;}
+  .about-coach{padding:40px 16px!important;}
+
+  /* ── Book page ── */
+  .book-section{padding:40px 16px!important;}
+  .expect{padding:40px 16px!important;}
+  .expect-grid{grid-template-columns:1fr!important;}
+  .expect-item{padding:20px 16px!important;}
+
+  /* ── FAQ page ── */
+  .faq-section{padding:40px 16px!important;}
+  .faq-q{padding:18px 16px!important;}
+  .faq-a{padding:0 16px 18px!important;}
+
+  /* ── Testimonials page ── */
+  .featured{padding:40px 16px!important;}
+  .fc-img{max-height:260px!important;}
+
+  /* ── Contact page ── */
+  .contact-section{padding:40px 16px!important;}
+  .form-box{padding:24px 16px!important;}
+  .ways{padding:40px 16px!important;}
+  .ways-grid{grid-template-columns:1fr!important;}
+  .way-item{padding:20px 16px!important;}
+
+  /* ── Legal page ── */
+  .legal-section{padding:40px 16px!important;}
+  .legal-content{padding:24px 16px!important;}
+}
+</style>
+</head>
+<body>
+<nav><div class="nav-in"><a class="nav-logo" href="index.html"><div class="nav-mark" style="overflow:hidden;padding:0;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:50%;display:block;"></div><div class="nav-name">Marcus Jenkins</div></a>
+    <button class="nav-burger" onclick="this.closest('nav').classList.toggle('nav-open')" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="work-with-me.html">Work With Me</a></li><li><a href="testimonials.html">Stories</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://api.leadconnectorhq.com/widget/booking/blGaFbzIebGyk4WbEBhF" class="nav-cta">Book a Session</a></li></ul></div></nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="lbl" style="margin-bottom:24px;">Legal</div>
+    <h1 class="hero-h1">Terms &amp;<br><em>Privacy</em></h1>
+    <p class="hero-sub">The fine print, kept honest and plain.</p>
+    <p class="hero-desc">I believe in being straightforward about how I handle your information and what you can expect from working with me. Please review these policies at your convenience. If anything is unclear, just ask — I'd rather explain it directly than hide behind legal language.</p>
+    <a href="contact.html" class="btn btn-out">Have a Question? Contact Me →</a>
+  </div>
+  <div class="toc-box">
+    <div class="toc-title">Quick Navigation</div>
+    <ul class="toc-list">
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#collection">Information We Collect</a></li>
+      <li><a href="#usage">How We Use Your Information</a></li>
+      <li><a href="#terms">Terms of Service</a></li>
+      <li><a href="#disclaimer">Coaching Disclaimer</a></li>
+      <li><a href="#refund">Refund Policy</a></li>
+      <li><a href="#contact">Contact Information</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Legal Content Section -->
+<section class="legal-section">
+  <div class="legal-grid">
+    <div class="legal-sidebar">
+      <div class="lbl-m" style="margin-bottom:18px;">Sections</div>
+      <ul class="legal-nav">
+        <li><a href="#privacy" class="active">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#disclaimer">Coaching Disclaimer</a></li>
+        <li><a href="#refund">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="legal-content">
+      <div class="legal-block" id="privacy">
+        <h2 class="legal-h">Privacy Policy</h2>
+        <p class="legal-p"><strong>Last Updated:</strong> April 2026</p>
+        <p class="legal-p">Marcus Jenkins Coaching ("I," "me," or "my") is committed to protecting your privacy. The men who reach out to me are often sharing deeply personal things. I take that trust seriously, and I handle your information accordingly. This Privacy Policy explains how I collect, use, and protect your data when you visit this website or engage my coaching services.</p>
+        <p class="legal-p">By using this site, you consent to the practices described in this policy. If you do not agree, please discontinue use of this site.</p>
+      </div>
+
+      <div class="legal-block" id="collection">
+        <h2 class="legal-h">Information We Collect</h2>
+        <p class="legal-p">I collect information in the following ways:</p>
+        <ul class="legal-list">
+          <li><strong>Personal Data:</strong> Your name, email address, phone number, and any other contact details you provide when booking a discovery call, submitting the contact form, signing up for email communications, or purchasing coaching services.</li>
+          <li><strong>Coaching Session Information:</strong> Notes and records related to our coaching work together, which are kept strictly confidential and never shared with third parties.</li>
+          <li><strong>Payment Information:</strong> Billing and payment details processed through our secure third-party payment processors. I do not store your full payment card information on my servers.</li>
+          <li><strong>Usage Data:</strong> Standard analytics about how you interact with this website — pages visited, time on site, device type, and referring sources — used solely to improve the website experience.</li>
+          <li><strong>Cookies:</strong> Small data files stored on your device to support site functionality and remember your preferences. You may disable cookies in your browser settings, though some features may not function as intended.</li>
+        </ul>
+      </div>
+
+      <div class="legal-block" id="usage">
+        <h2 class="legal-h">How We Use Your Information</h2>
+        <p class="legal-p">Your information is used to:</p>
+        <ul class="legal-list">
+          <li>Provide, operate, and deliver coaching services</li>
+          <li>Process bookings and transactions and send related confirmations</li>
+          <li>Respond personally to your inquiries and messages</li>
+          <li>Send email communications you have opted into (you may unsubscribe at any time)</li>
+          <li>Improve the quality and relevance of this website and its content</li>
+          <li>Comply with applicable legal obligations</li>
+        </ul>
+        <p class="legal-p" style="margin-top:14px;">I do not sell, rent, or share your personal information with third parties for marketing purposes — ever.</p>
+      </div>
+
+      <div class="legal-block" id="terms">
+        <h2 class="legal-h">Terms of Service</h2>
+        <p class="legal-p"><strong>Last Updated:</strong> April 2026</p>
+        <p class="legal-p">By accessing or using this website and any services offered by Marcus Jenkins Coaching, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use this site or engage my services.</p>
+        <p class="legal-p">You agree to use this website and its content only for lawful purposes. You may not reproduce, redistribute, or use any content from this site for commercial purposes without written permission.</p>
+        <p class="legal-p">You are responsible for maintaining the confidentiality of any account or booking credentials and for all activities associated with your account. I reserve the right to modify these terms at any time. Continued use of the site constitutes acceptance of any updated terms.</p>
+      </div>
+
+      <div class="legal-block" id="disclaimer">
+        <h2 class="legal-h">Coaching Disclaimer</h2>
+        <p class="legal-p">Marcus Jenkins Coaching provides faith-based personal development coaching. <strong>Coaching is not therapy, counseling, psychiatry, or any form of licensed mental health treatment.</strong> I am not a licensed therapist, psychologist, or medical professional.</p>
+        <p class="legal-p">My work is designed to help men identify root-level patterns, develop a healthier relationship with their identity in Christ, and build practices that support lasting transformation. It is not designed to diagnose, treat, or cure any mental health condition, including addiction or trauma disorders.</p>
+        <p class="legal-p">Results from coaching vary based on individual effort, circumstances, history, and commitment to the process. Testimonials shared on this site reflect the real experiences of specific men and are not guarantees of outcomes for every client.</p>
+        <p class="legal-p"><strong>If you are experiencing a mental health crisis, suicidal ideation, or acute trauma symptoms, please contact a licensed mental health professional or call the National Crisis Line at 988 immediately.</strong> Coaching is not a substitute for clinical care.</p>
+        <p class="legal-p">I do encourage clients who are in therapy to continue that work alongside coaching — the two can complement each other well. If you have questions about whether coaching is appropriate for your situation, please reach out before booking.</p>
+      </div>
+
+      <div class="legal-block" id="refund">
+        <h2 class="legal-h">Refund Policy</h2>
+        <p class="legal-p">I am committed to the men I work with, and I want every client to feel they made the right investment. Refund requests are handled on a case-by-case basis within the first 30 days of program enrollment.</p>
+        <p class="legal-p">If, within 30 days of starting, you feel the program is not the right fit for reasons within my control, reach out to me directly at marcus@marcusjenkinscoaching.com. We will have an honest conversation and work toward a fair resolution. I will not hide behind a policy if something went wrong.</p>
+        <p class="legal-p">Refunds are not available after 30 days or for missed sessions due to client scheduling conflicts. Discovery calls (free) and the free training carry no purchase obligation and no refund is applicable.</p>
+      </div>
+
+      <div class="legal-block" id="contact">
+        <h2 class="legal-h">Contact Information</h2>
+        <p class="legal-p">If you have any questions about these policies, please don't hesitate to reach out directly:</p>
+        <p class="legal-p"><strong>Email:</strong> marcus@marcusjenkinscoaching.com<br><strong>Location:</strong> Atlanta, GA (serving clients remotely nationwide)<br><strong>Response Time:</strong> I personally respond within 24–48 hours.</p>
+        <p class="legal-p">You may also use the <a href="contact.html" style="color:var(--mid);text-decoration:none;">contact form on this site</a> to send a message directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo-row"><div class="footer-mark">✝</div><div class="footer-name">Marcus Jenkins</div></div><p class="footer-tag">Grace-rooted freedom for Christian men who've been carrying wounds they were never meant to carry alone.</p><div class="footer-verse"><p>"You will know the truth, and the truth will set you free." — John 8:32</p></div></div>
+    <div><div class="fcol-hd">Navigate</div><ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="work-with-me.html">Work With Me</a></li><li><a href="testimonials.html">Stories</a></li><li><a href="https://api.leadconnectorhq.com/widget/booking/blGaFbzIebGyk4WbEBhF">Book a Session</a></li></ul></div>
+    <div><div class="fcol-hd">Programs</div><ul class="flinks"><li><a href="work-with-me.html">1:1 Coaching</a></li><li><a href="work-with-me.html">Group Program</a></li><li><a href="work-with-me.html">Online Course</a></li></ul></div>
+    <div><div class="fcol-hd">Legal</div><ul class="flinks"><li><a href="legal.html">Privacy Policy</a></li><li><a href="legal.html">Terms of Service</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bot"><p>© 2026 Marcus Jenkins. All rights reserved.</p><div class="footer-powered">Powered by <strong>Alive & Free Consulting</strong></div></div>
+</footer>
+</body>
+</html>
