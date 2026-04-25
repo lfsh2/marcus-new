@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free Training — Marcus Jenkins · Faith-Based Men's Coach</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f5f7f4;--bg-warm:#eef2eb;--bg-section:#e5ebe0;--white:#ffffff;--deep:#2b3a2e;--mid:#5a7a5c;--soft:#8aaa7c;--pale:#c8d9be;--wash:rgba(90,122,92,.08);--gold:#c4922a;--gold-pale:#f0e0c0;--text:#2a2e28;--text-mid:#6a7a64;--text-light:#9aaa94;--border:#d8ddd4;--border-lt:#e8ede4;--serif:'Cormorant Garamond',serif;--sans:'Jost',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{max-width:1440px;width:100%;margin:0 auto;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased;}
+.lbl{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);}.lbl::before{content:'';width:16px;height:1.5px;background:var(--gold);display:block;}
+.lbl-m{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid);}.lbl-m::before{content:'';width:16px;height:1.5px;background:var(--soft);display:block;}
+.lbl-lt{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.5);}.lbl-lt::before{content:'';width:16px;height:1.5px;background:rgba(255,255,255,.3);display:block;}
+.h2{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.1;color:var(--deep);}.h2 em{font-style:italic;color:var(--mid);}
+.h2-lt{font-family:var(--serif);font-size:48px;font-weight:300;line-height:1.1;color:#fff;}.h2-lt em{font-style:italic;color:var(--pale);}
+.body{font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.8;color:var(--text-mid);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:500;padding:14px 28px;border-radius:2px;text-decoration:none;cursor:pointer;border:none;letter-spacing:.3px;}
+.btn-dark{background:var(--deep);color:#fff;}.btn-mid{background:var(--mid);color:#fff;}.btn-out{background:transparent;color:var(--deep);border:1.5px solid var(--border);}.btn-wh{background:#fff;color:var(--deep);}.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
+nav{width:100%;height:68px;background:var(--white);border-bottom:1px solid var(--border-lt);display:flex;align-items:center;}
+.nav-in{width:100%;padding:0 64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-mark{width:32px;height:32px;background:var(--deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:14px;color:var(--gold);}
+.nav-name{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--deep);}.nav-name em{font-style:italic;color:var(--mid);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;color:var(--text-mid);text-decoration:none;}.nav-links a.active{color:var(--deep);font-weight:500;}
+.nav-cta{background:var(--deep)!important;color:#fff!important;padding:10px 20px;border-radius:2px;font-weight:500!important;font-size:12px!important;}
+.vsl-hero{width:100%;background:var(--white);padding:60px 64px 40px;text-align:center;}
+.vsl-hero-inner{max-width:800px;margin:0 auto;}
+.vsl-box{width:100%;max-width:960px;margin:40px auto 0;aspect-ratio:16/9;background:var(--deep);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;position:relative;overflow:hidden;}
+.vsl-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(90,122,92,.15) 0%,transparent 70%);pointer-events:none;}
+.vsl-play{width:80px;height:80px;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:rgba(255,255,255,.6);position:relative;z-index:1;cursor:pointer;}
+.vsl-label{font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(255,255,255,.35);position:relative;z-index:1;}
+.learn{width:100%;background:var(--deep);padding:80px 64px;position:relative;overflow:hidden;}
+.learn::before{content:'✝';position:absolute;bottom:-60px;right:-20px;font-size:300px;color:rgba(255,255,255,.02);font-family:serif;line-height:1;pointer-events:none;}
+.learn-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;}
+.learn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);}
+.learn-item{background:var(--deep);padding:40px 32px;position:relative;}
+.learn-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);}
+.learn-item:nth-child(2)::before{background:var(--mid);}
+.learn-item:nth-child(3)::before{background:var(--soft);}
+.learn-item:nth-child(4)::before{background:var(--pale);}
+.learn-n{font-family:var(--serif);font-size:64px;font-weight:300;color:rgba(255,255,255,.04);line-height:1;margin-bottom:16px;}
+.learn-title{font-family:var(--serif);font-size:20px;font-weight:300;color:#fff;line-height:1.25;margin-bottom:12px;}
+.learn-body{font-size:13px;line-height:1.7;color:rgba(255,255,255,.4);}
+.about-coach{width:100%;background:var(--bg-warm);padding:80px 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.coach-img{background:var(--mid);border-radius:4px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;position:relative;overflow:hidden;box-shadow:20px 20px 0 var(--pale),0 36px 72px rgba(0,0,0,.14);}
+.coach-img::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(43,58,46,.12) 0%,transparent 45%,rgba(43,58,46,.52) 100%);z-index:1;pointer-events:none;}
+.scripture-box{background:var(--deep);border-radius:4px;padding:28px 24px;position:relative;overflow:hidden;margin-top:24px;}
+.scripture-box::before{content:'"';position:absolute;top:-12px;left:6px;font-family:var(--serif);font-size:100px;color:rgba(255,255,255,.03);line-height:1;}
+.sc-text{font-family:var(--serif);font-style:italic;font-size:16px;font-weight:300;color:#fff;line-height:1.5;margin-bottom:8px;position:relative;z-index:1;}
+.sc-ref{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.5;}
+.cta{width:100%;display:grid;grid-template-columns:1fr 1fr;min-height:400px;}
+.cta-left{background:var(--mid);padding:72px 64px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.cta-left::before{content:'✝';position:absolute;bottom:-40px;right:-10px;font-size:240px;color:rgba(255,255,255,.04);font-family:serif;line-height:1;pointer-events:none;}
+.cta-left::after{content:'';position:absolute;top:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:rgba(0,0,0,.08);pointer-events:none;}
+.cta-h{font-family:var(--serif);font-size:44px;font-weight:300;line-height:1.05;color:#fff;margin-bottom:18px;position:relative;z-index:1;}.cta-h em{font-style:italic;opacity:.6;}
+.cta-sub{font-size:14px;line-height:1.75;color:rgba(255,255,255,.55);max-width:340px;margin-bottom:32px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:12px;position:relative;z-index:1;}
+.cta-right{background:var(--bg);border-left:1px solid var(--border);padding:72px 56px;display:flex;flex-direction:column;justify-content:center;gap:24px;}
+.cta-right-intro{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--text-mid);}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.checklist li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--text-mid);line-height:1.5;}
+.checklist li::before{content:'✓';width:22px;height:22px;background:var(--wash);border:1.5px solid var(--pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--mid);flex-shrink:0;margin-top:1px;}
+.cta-note{padding:16px 18px;background:var(--white);border-radius:3px;border:1px solid var(--border);}.cta-note p{font-size:12.5px;color:var(--text-mid);line-height:1.65;}.cta-note strong{font-weight:600;color:var(--deep);}
+footer{width:100%;background:var(--deep);border-top:1px solid rgba(255,255,255,.04);}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding:56px 64px 44px;}
+.footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-mark{width:32px;height:32px;background:var(--mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:13px;color:var(--gold);}
+.footer-name{font-family:var(--serif);font-size:18px;font-weight:300;color:#fff;}.footer-name em{font-style:italic;color:var(--pale);}
+.footer-tag{font-size:12.5px;color:rgba(255,255,255,.3);line-height:1.7;max-width:220px;margin-bottom:20px;}
+.footer-verse{padding:12px 14px;border-left:2px solid rgba(255,255,255,.1);}.footer-verse p{font-family:var(--serif);font-style:italic;font-size:12px;color:rgba(255,255,255,.28);line-height:1.6;}
+.fcol-hd{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:16px;}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px;}.flinks a{font-size:13px;color:rgba(255,255,255,.42);text-decoration:none;}
+.footer-bot{padding:18px 64px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;}
+.footer-bot p{font-size:11px;color:rgba(255,255,255,.2);}.footer-powered{font-size:11px;color:rgba(255,255,255,.15);}.footer-powered strong{color:rgba(255,255,255,.35);font-weight:500;}
+
+
+
+/* ================================================
+   MOBILE RESPONSIVE — all marcus pages
+   Breakpoints: 900px (tablet) | 540px (phone)
+   ================================================ */
+
+/* ── Tablet: ≤ 900px ─────────────────────────── */
+@media(max-width:900px){
+
+  /* ── Body & shared layout ── */
+  body{overflow-x:hidden;}
+
+  /* ── Navigation ── */
+  nav{width:100%!important;}
+  .nav-in{padding:0 24px;}
+  .nav-links{display:none;}
+
+  /* ── Hero (all pages with a hero section) ── */
+  .hero{
+    grid-template-columns:1fr!important;
+    padding:48px 24px 36px!important;
+    gap:32px!important;
+    width:100%!important;
+  }
+  .hero-content{max-width:100%;}
+  .hero-h1{font-size:46px!important;}
+  .hero-sub{font-size:22px!important;}
+  .hero-img{
+    aspect-ratio:16/9!important;
+    box-shadow:10px 10px 0 var(--pale),0 20px 40px rgba(0,0,0,.12)!important;
+  }
+  .hero-btns{flex-wrap:wrap;}
+
+  /* ── Stats row ── */
+  .stats-row{
+    width:100%!important;
+    padding:0 24px 40px!important;
+    flex-wrap:wrap;
+    gap:20px!important;
+  }
+
+  /* ── Pillars (4-col → 2-col) ── */
+  .pillars{
+    width:100%!important;
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+
+  /* ── About / scripture left + content right ── */
+  .about{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+
+  /* ── Programs dark section ── */
+  .programs{width:100%!important;padding:60px 24px!important;}
+  .programs-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+    margin-bottom:32px!important;
+  }
+  .programs-header-right{max-width:100%!important;text-align:left!important;}
+  .programs-grid{grid-template-columns:1fr!important;gap:0!important;}
+  .prog-card{padding:32px 24px!important;}
+
+  /* ── Path section (4-col → 2-col) ── */
+  .path{width:100%!important;padding:60px 24px!important;}
+  .path-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+    margin-bottom:32px!important;
+  }
+  .path-header-right{max-width:100%!important;}
+  .path-grid{grid-template-columns:repeat(2,1fr)!important;}
+
+  /* ── Testimonials strip ── */
+  .testimonials{width:100%!important;padding:60px 24px!important;}
+  .test-header{
+    flex-direction:column!important;
+    gap:20px!important;
+    align-items:flex-start!important;
+  }
+  .test-header-right{align-items:flex-start!important;}
+  .test-grid{grid-template-columns:1fr!important;gap:0!important;}
+
+  /* ── CTA split ── */
+  .cta{width:100%!important;grid-template-columns:1fr!important;}
+  .cta-left{padding:56px 24px!important;}
+  .cta-right{
+    padding:48px 24px!important;
+    border-left:none!important;
+    border-top:1px solid var(--border)!important;
+  }
+  .cta-h{font-size:36px!important;}
+
+  /* ── Footer ── */
+  footer{width:100%!important;}
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr)!important;
+    padding:40px 24px 32px!important;
+    gap:32px!important;
+  }
+  .footer-bot{
+    padding:16px 24px!important;
+    flex-direction:column!important;
+    gap:8px!important;
+    text-align:center!important;
+  }
+
+  /* ══ PAGE-SPECIFIC ══════════════════════════ */
+
+  /* ── About page: values-grid (3-col → 2-col), creds-grid (4-col → 2-col) ── */
+  .values-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .value-card{padding:28px 20px!important;}
+  .creds-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .cred-item{padding:28px 20px!important;}
+
+  /* ── Work-with-me: compare table ── */
+  .compare{width:100%!important;padding:60px 24px!important;overflow-x:auto;}
+  .compare-table{min-width:560px;}
+
+  /* ── VSL page ── */
+  .vsl-hero{
+    width:100%!important;
+    padding:60px 24px 36px!important;
+  }
+  .vsl-box{
+    width:100%!important;
+    max-width:100%!important;
+    padding:0!important;
+  }
+  .learn{width:100%!important;padding:60px 24px!important;}
+  .learn-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .learn-item{padding:28px 20px!important;}
+  .about-coach{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .coach-img{width:100%!important;aspect-ratio:4/3!important;max-height:380px!important;}
+
+  /* ── Book page ── */
+  .book-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .book-embed{min-height:400px!important;}
+  .expect{width:100%!important;padding:60px 24px!important;}
+  .expect-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .expect-item{padding:28px 20px!important;}
+
+  /* ── FAQ page: sidebar stacks above content ── */
+  .faq-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:32px!important;
+  }
+  .faq-sidebar{position:static!important;top:auto!important;}
+
+  /* ── Testimonials page: featured card ── */
+  .featured{width:100%!important;padding:60px 24px!important;}
+  .featured-card{
+    grid-template-columns:1fr!important;
+    gap:32px!important;
+  }
+  .fc-img{max-height:360px!important;}
+
+  /* ── Contact page ── */
+  .contact-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:40px!important;
+  }
+  .form-box{padding:32px 24px!important;}
+  .ways{width:100%!important;padding:60px 24px!important;}
+  .ways-grid{grid-template-columns:repeat(2,1fr)!important;gap:0!important;}
+  .way-item{padding:28px 20px!important;}
+
+  /* ── Legal page: sticky sidebar stacks above content ── */
+  .legal-section{
+    width:100%!important;
+    grid-template-columns:1fr!important;
+    padding:60px 24px!important;
+    gap:32px!important;
+  }
+  .legal-sidebar{position:static!important;top:auto!important;}
+  .legal-content{padding:32px 24px!important;}
+
+  /* ── Typography scale-down ── */
+  .h2,.h2-lt{font-size:38px!important;}
+  .h1{font-size:46px!important;}
+}
+
+/* ── Phone: ≤ 540px ──────────────────────────── */
+@media(max-width:540px){
+
+  /* ── Navigation ── */
+  .nav-in{padding:0 16px!important;}
+
+  /* ── Hero ── */
+  .hero{padding:32px 16px 28px!important;}
+  .hero-h1{font-size:34px!important;line-height:1.05!important;}
+  .hero-sub{font-size:18px!important;}
+  .hero-desc{font-size:13px!important;}
+  .hero-btns{flex-direction:column!important;gap:10px!important;}
+  .hero-btns .btn{width:100%!important;justify-content:center!important;}
+  .hero-img{
+    aspect-ratio:4/3!important;
+    box-shadow:8px 8px 0 var(--pale),0 16px 32px rgba(0,0,0,.12)!important;
+  }
+
+  /* ── Stats ── */
+  .stats-row{padding:0 16px 28px!important;}
+
+  /* ── Pillars → 1 col ── */
+  .pillars{grid-template-columns:1fr!important;}
+  .pillar{padding:20px 16px!important;border-right:none!important;border-bottom:1px solid var(--border-lt)!important;}
+
+  /* ── About ── */
+  .about{padding:40px 16px!important;}
+  .chips-grid{grid-template-columns:1fr 1fr!important;}
+
+  /* ── Programs ── */
+  .programs{padding:40px 16px!important;}
+  .prog-card{padding:24px 16px!important;}
+
+  /* ── Path → 1 col ── */
+  .path{padding:40px 16px!important;}
+  .path-grid{grid-template-columns:1fr!important;}
+  .path-step{
+    padding:24px 16px!important;
+    border-right:none!important;
+    border-bottom:1px solid var(--border-lt)!important;
+  }
+
+  /* ── Testimonials ── */
+  .testimonials{padding:40px 16px!important;}
+  .tcard{padding:24px 16px!important;}
+
+  /* ── CTA ── */
+  .cta-left,.cta-right{padding:36px 16px!important;}
+  .cta-h{font-size:26px!important;}
+  .cta-btns{flex-direction:column!important;gap:10px!important;}
+  .cta-btns .btn{width:100%!important;justify-content:center!important;}
+
+  /* ── Footer → 1 col ── */
+  .footer-grid{grid-template-columns:1fr!important;padding:28px 16px 20px!important;}
+  .footer-bot{padding:12px 16px!important;}
+
+  /* ── Typography ── */
+  .h2,.h2-lt{font-size:28px!important;}
+  .h1{font-size:32px!important;}
+  .hero-h1{font-size:28px!important;}
+
+  /* ── About page ── */
+  .values-grid{grid-template-columns:1fr!important;}
+  .value-card{padding:20px 16px!important;}
+  .creds-grid{grid-template-columns:1fr 1fr!important;}
+  .cred-item{padding:20px 16px!important;}
+
+  /* ── VSL page ── */
+  .vsl-hero{padding:40px 16px 28px!important;}
+  .learn{padding:40px 16px!important;}
+  .learn-grid{grid-template-columns:1fr!important;}
+  .about-coach{padding:40px 16px!important;}
+
+  /* ── Book page ── */
+  .book-section{padding:40px 16px!important;}
+  .expect{padding:40px 16px!important;}
+  .expect-grid{grid-template-columns:1fr!important;}
+  .expect-item{padding:20px 16px!important;}
+
+  /* ── FAQ page ── */
+  .faq-section{padding:40px 16px!important;}
+  .faq-q{padding:18px 16px!important;}
+  .faq-a{padding:0 16px 18px!important;}
+
+  /* ── Testimonials page ── */
+  .featured{padding:40px 16px!important;}
+  .fc-img{max-height:260px!important;}
+
+  /* ── Contact page ── */
+  .contact-section{padding:40px 16px!important;}
+  .form-box{padding:24px 16px!important;}
+  .ways{padding:40px 16px!important;}
+  .ways-grid{grid-template-columns:1fr!important;}
+  .way-item{padding:20px 16px!important;}
+
+  /* ── Legal page ── */
+  .legal-section{padding:40px 16px!important;}
+  .legal-content{padding:24px 16px!important;}
+}
+</style>
+</head>
+<body>
+<nav><div class="nav-in"><a class="nav-logo" href="index.html"><div class="nav-mark" style="overflow:hidden;padding:0;"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:50%;display:block;"></div><div class="nav-name">Marcus Jenkins</div></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="work-with-me.html">Work With Me</a></li><li><a href="vsl.html" class="active">Free Training</a></li><li><a href="testimonials.html">Stories</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://api.leadconnectorhq.com/widget/booking/blGaFbzIebGyk4WbEBhF" class="nav-cta">Book a Session</a></li></ul></div></nav>
+
+<!-- VSL Hero -->
+<section class="vsl-hero">
+  <div class="vsl-hero-inner">
+    <div class="lbl" style="justify-content:center;margin-bottom:20px;">Free Training</div>
+    <h2 class="h2">The Real Reason You Can't Stop —<br>and What <em>Actually Works</em></h2>
+    <p class="body" style="margin-top:16px;max-width:640px;margin-left:auto;margin-right:auto;">A straight, 45-minute conversation from a man who spent 26 years in the cycle and 3 years genuinely free. What the church isn't telling you about why shame-based accountability fails — and the grace-rooted framework that has produced lasting freedom for every man I've walked through it.</p>
+  </div>
+  <div class="vsl-box" style="display:block;padding:0;">
+    <iframe src="https://www.youtube.com/embed/pvuqIwqKkSI" title="The Real Reason You Can't Stop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:4px;"></iframe>
+  </div>
+</section>
+
+<!-- What You'll Learn - Dark -->
+<section class="learn">
+  <div class="learn-header">
+    <div>
+      <div class="lbl-lt" style="margin-bottom:16px;">What You'll Learn</div>
+      <h2 class="h2-lt">Four Truths the Church<br><em>Hasn't Told You.</em></h2>
+    </div>
+    <div style="max-width:280px;text-align:right;">
+      <p style="font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;">By the end of this training you will understand exactly why you've been stuck — and have a clear picture of the way out.</p>
+    </div>
+  </div>
+  <div class="learn-grid">
+    <div class="learn-item">
+      <div class="learn-n">01</div>
+      <div class="learn-title">The Real Root Beneath the Behavior</div>
+      <p class="learn-body">This is not a lust problem or a discipline problem. I'll show you exactly what has been driving the behavior from underneath — and why it makes complete sense that willpower, filters, and accountability groups have never worked long-term.</p>
+    </div>
+    <div class="learn-item">
+      <div class="learn-n">02</div>
+      <div class="learn-title">Why Shame Is the Engine, Not the Brake</div>
+      <p class="learn-body">Shame-based recovery doesn't just fail to heal — it actively accelerates the cycle. I'll walk you through the neuroscience and the theology behind why, and why grace is not a permissive cop-out but the only thing that actually breaks the pattern.</p>
+    </div>
+    <div class="learn-item">
+      <div class="learn-n">03</div>
+      <div class="learn-title">The Father Wound No One Talks About</div>
+      <p class="learn-body">The direct connection between an absent, absent-emotionally, or abusive father and the nervous system dysregulation underneath sexual brokenness. This is the conversation that most churches, therapists, and recovery programs are not having — and it changes everything.</p>
+    </div>
+    <div class="learn-item">
+      <div class="learn-n">04</div>
+      <div class="learn-title">The Five Stages of The Sonship Path</div>
+      <p class="learn-body">The complete framework that took me from 26 years of compulsive porn use to 3 years of genuine, integrated freedom — Map, Grieve, Meet, Integrate, Lead. Grace, nervous system healing, and inner healing prayer working together in sequence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Coach Section -->
+<section class="about-coach">
+  <div class="coach-img">
+    <img src="https://images.unsplash.com/photo-1732135473089-bb472a0cdbaa?w=900&h=1000&fit=crop&q=80" alt="Marcus Jenkins" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:top center;">
+  </div>
+  <div>
+    <div class="lbl-m" style="margin-bottom:18px;">Your Host</div>
+    <h2 class="h2" style="margin-bottom:20px;">Meet <em>Marcus Jenkins.</em></h2>
+    <p class="body" style="margin-bottom:16px;">I'm Marcus Jenkins. I used pornography for 26 years while serving as a church deacon, leading men's ministry, and building a corporate finance career. I tried every program — Every Man's Battle, Covenant Eyes, Celebrate Recovery, X3Pure, accountability partners, pastoral counseling, and men's groups. I'd get clean for 30 days. Then I'd relapse. Shame spiral. Back to the same confession. For 26 years, that was the hidden architecture of my life.</p>
+    <p class="body" style="margin-bottom:24px;">In 2021 I met a coach who took me back to an 8-year-old boy standing in a kitchen watching his dad leave. In that session, something unlocked that 26 years of behavioral approaches never touched. Three years free — not as a personal achievement I'm proud of, but as the natural outcome of actual healing. This training is the conversation I desperately needed 20 years ago and couldn't find anywhere.</p>
+    <a href="about.html" class="btn btn-dark">Read Full Story →</a>
+    <div class="scripture-box">
+      <p class="sc-text">"The Father saw him while he was still a long way off — and ran to him."</p>
+      <p class="sc-ref">— Luke 15:20</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="cta-left">
+    <div class="lbl-lt" style="margin-bottom:18px;">If This Resonated →</div>
+    <h2 class="cta-h">Ready for a Real<br><em>Conversation?</em></h2>
+    <p class="cta-sub">Book a free 30-minute discovery call. No script, no pitch. Just a straight conversation between two men about what's actually going on and whether this work is the right next step for you.</p>
+    <div class="cta-btns">
+      <a href="https://api.leadconnectorhq.com/widget/booking/blGaFbzIebGyk4WbEBhF" class="btn btn-wh">Book a Discovery Call →</a>
+      <a href="work-with-me.html" class="btn btn-ghost">See Programs →</a>
+    </div>
+  </div>
+  <div class="cta-right">
+    <div class="cta-right-intro">On our call, you'll get clarity on…</div>
+    <ul class="checklist">
+      <li>Why the behavior keeps returning despite every sincere attempt to stop it</li>
+      <li>What the father wound actually is and how it connects to your specific pattern</li>
+      <li>Whether The Sonship Path is the right next step for your situation</li>
+      <li>What it would actually feel like to be genuinely free — not white-knuckling, actually free</li>
+    </ul>
+    <div class="cta-note"><p><strong>Zero pressure. Zero obligation.</strong> If it's not the right fit, I'll tell you honestly and point you somewhere that is.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo-row"><div class="footer-mark">✝</div><div class="footer-name">Marcus Jenkins</div></div><p class="footer-tag">Grace-rooted freedom for Christian men who've been carrying wounds they were never meant to carry alone.</p><div class="footer-verse"><p>"You will know the truth, and the truth will set you free." — John 8:32</p></div></div>
+    <div><div class="fcol-hd">Navigate</div><ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="work-with-me.html">Work With Me</a></li><li><a href="testimonials.html">Stories</a></li><li><a href="https://api.leadconnectorhq.com/widget/booking/blGaFbzIebGyk4WbEBhF">Book a Session</a></li></ul></div>
+    <div><div class="fcol-hd">Programs</div><ul class="flinks"><li><a href="work-with-me.html">1:1 Coaching</a></li><li><a href="work-with-me.html">Brotherhood Cohort</a></li><li><a href="work-with-me.html">Self-Paced Course</a></li><li><a href="vsl.html">Free Training</a></li></ul></div>
+    <div><div class="fcol-hd">Legal</div><ul class="flinks"><li><a href="legal.html">Privacy Policy</a></li><li><a href="legal.html">Terms of Service</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bot"><p>© 2026 Marcus Jenkins. All rights reserved.</p><div class="footer-powered">Powered by <strong>Alive &amp; Free Consulting</strong></div></div>
+</footer>
+</body>
+</html>
